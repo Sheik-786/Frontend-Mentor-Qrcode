@@ -13,73 +13,118 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    *{
-      font-family: "Outfit", serif;
-     
+    :root {
+    --white: hsl(0, 0%, 100%);
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
+  }
+  
+  body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--slate-300);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    background-color: var(--white);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 320px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .container h1 {
+    font-size: 1.5rem;
+    color: var(--slate-900);
+    margin: 20px 0 10px;
+    line-height: 1.4;
+  }
+  
+  .container p {
+    font-size: 0.9375rem;
+    color: var(--slate-500);
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  .attribution {
+    margin-top: 20px;
+    font-size: 11px;
+    text-align: center;
+    color: var(--slate-500);
+  }
+  
+  .attribution a {
+    color: var(--slate-900);
+    text-decoration: none;
+  }
+  
+  @media (max-width: 375px) {
+    .container {
+      padding: 15px;
     }
-    .content p{
-      font-size: 16px;
-      text-align: center;
-      margin: 15px;
-      color: #68778D;
+  
+    .container h1 {
+      font-size: 1.25rem;
     }
-    body{
-      background-color: #D5E1EF;
-      display: grid;
-      place-items: center;
-    }
-    .box{
-      width: 320px;
-      height: 499px;
-      /* align-items: center;
-      justify-content: center; */
-      margin: 50px;
-      border-radius: 10px;
-      background-color: #fff;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-      overflow: hidden;
-    }
-    .img img{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-    .img{
-      margin: 10px;
-    }
-    .content h4{
-      font-size: 20px;
-      margin: 15px;
-      text-align: center;
-    }
-    @media (max-width: 375px) {
-    .box {
-      width: 90%;        /* Reduce container width to fit small screens */
-      margin: 20px;      /* Add some space around */
-    }
-    .content h4 {
-      font-size: 18px;   /* Slightly reduce heading size */
-    }
-    .content p {
-      font-size: 14px;   /* Reduce paragraph size */
+  
+    .container p {
+      font-size: 0.875rem;
     }
   }
+
+  @media (min-width: 1440px) {
+    body {
+      padding: 20px; 
+    }
+  
+    .container {
+      width: 25%;
+      max-width: 400px;
+    }
+  
+    .container h1 {
+      font-size: 1.75rem;
+    }
+  
+    .container p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+      width: 60%;
+      max-width: 500px;
+    }
+  }
+  
     
     
 
   </style>
 </head>
 <body>
-    <div class="box">
-        <div class="img">
-            <img  src="images/image-qr-code.png" alt="">
-        </div>
-        <div class="content">
-          <h4>Improve your front-end skills by building projects</h4>
-          <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
-        </div>
-    </div>
+  <div class="container">
+
+    <img src="./images/image-qr-code.png" alt="QR-code"/>
+
+    <h1>Improve your front-end skills by building projects</h1>
+    <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+
+  </div>
 
 </body>
 </html>
